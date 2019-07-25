@@ -22,4 +22,4 @@ urlpatterns = [
     url(r'',include('instagram.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
 ]
-]
+
