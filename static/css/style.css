@@ -1,0 +1,20 @@
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.home-images {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    margin: 0 0 10px;
+}
+
+.home-images img {
+    width: 100%;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+.home-list {
+    padding-left: 1rem;
+}

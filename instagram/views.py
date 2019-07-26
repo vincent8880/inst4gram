@@ -11,7 +11,9 @@ from django.http import HttpResponse
 # Create your views here.
 @login_required(login_url='/accounts/register/')
 def index(request):
-    return render(request,'index.html')
+    images = Image.get_all_images()
+    
+    return render(request, 'index.html', {'images':images})
 def profile(request, username):
     profile = User.objects.get(username=username)
     # print(profile.id)
