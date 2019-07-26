@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from . import views
 from django.contrib.auth.decorators import login_required
+from .models import Image, Profile, Comments
+
 
 
 # Create your views here.
