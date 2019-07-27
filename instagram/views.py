@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from . import views
 from django.contrib.auth.decorators import login_required
 from .models import Image, Profile, Comments
