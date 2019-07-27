@@ -1,8 +1,8 @@
 body {
-    background-color:#be2ac3;
+    background-color:#b12ac3;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image: url("/static/img/icons.jpg")
-}
+     /* background-image: url("/static/img/icons.jpg") */
+}  
 .signup-page {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -24,7 +24,8 @@ body {
 }
 
 .signup-fields {
-    color: whitesmoke;
+    color:#fffafa;
+    font-weight: bold;
     -webkit-box-flex: 1;
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
@@ -34,7 +35,7 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
     margin-top: 12px;
-    max-width: 350px;
+    max-width: 1635px;
 }
 
 .section {
@@ -47,7 +48,7 @@ body {
 
 .section h1 {
     font-family: 'Billabong';
-    font-size: 60px;
+    font-size: 100px;
     text-align: center;
     color: white;
     padding-top: 1rem;
