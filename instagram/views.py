@@ -91,4 +91,4 @@ def like(request,operation,pk):
     elif operation =='unlike':
         image.likes -= 1
         image.save()
-    return redirect('index')
+    return redirect('home')

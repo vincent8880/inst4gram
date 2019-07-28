@@ -34,7 +34,7 @@ class Image(models.Model):
     image_name = models.CharField(max_length = 50)
     image_caption = HTMLField(blank=True)
     post_date = models.DateTimeField(auto_now=True)
-    likes = models.BooleanField(default=False)
+    models.PositiveIntegerField(default=0)
     profile = models.ForeignKey(User, on_delete=models.CASCADE)
 
     class Meta:
