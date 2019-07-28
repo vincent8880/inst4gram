@@ -13,7 +13,7 @@
                 <img src="{{img.photo.cdn_url}}" alt="Image">
                 <ul class="list-inline home-text">
                     <li class="list-inline-item">
-                        <i class="fa fa-heart-o fa-2x" aria-hidden="true"></i>
+                        <a href="{% url 'like' operation='like' pk=img.id%}"><i class="fa fa-heart-o fa-2x"  aria-hidden="true"></i></a>
                     </li>
                     <li class="list-inline-item">
                         <a href="{% url 'single_image' image_id=img.id %}"><i class="fa fa-comment-o fa-2x" aria-hidden="true"></i></a>
@@ -29,6 +29,13 @@
                     {% endautoescape %}
                     </li>
                 </ul>
+                {% if img.likes >= 1 %}
+
+                <div class="row">
+                  <h5 style="padding:8px; color:red;"><b>{{img.likes}} likes</b></h5>
+                </div>
+      
+                {% endif %}
                 
             </div>
             {% empty %}

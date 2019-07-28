@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render,redirect,get_object_or_404
 from . import views
 from django.contrib.auth.decorators import login_required
 from .models import Image, Profile, Comments
@@ -83,3 +83,12 @@ def search(request):
     else:
         message = 'Enter term to search'
         return render(request, 'search.html', {'message':message})
+def like(request,operation,pk):
+    image = get_object_or_404(Image,pk=pk)
+    if operation == 'like':
+        image.likes += 1
+        image.save()
+    elif operation =='unlike':
+        image.likes -= 1
+        image.save()
+    return redirect('index')
