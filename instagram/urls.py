@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^search/', views.search, name='search'),
     url(r'^like/(?P<operation>.+)/(?P<pk>\d+)',views.like, name='like'),
     url(r"^profile/update/$", views.update_profile, name = "update_profile"),
-    url(r"^accounts/profile/$", views.index, name = 'home')
+    url(r"^accounts/profile/$",views.index, name = 'home')
 ]
 
 if settings.DEBUG:
