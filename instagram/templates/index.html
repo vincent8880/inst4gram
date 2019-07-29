@@ -29,13 +29,14 @@
                     {% endautoescape %}
                     </li>
                 </ul>
-                {% if img.likes >= 1 %}
-
-                <div class="row">
-                  <h5 style="padding:8px; color:red;"><b>{{img.likes}} likes</b></h5>
-                </div>
-      
-                {% endif %}
+                <ul class="list-inline home-list">
+                    {% if img.likes >= 1 %}
+                    <li class="list-inline-item">
+                        <h5 ><b>{{img.likes}} likes</b></h5>
+                      </li>
+                    {% endif %}
+                </ul>
+              
                 
             </div>
             {% empty %}
@@ -44,5 +45,6 @@
         </div>
     </div>
 </div>
+<br><br><br><br>
 </div>
 {% endblock %}

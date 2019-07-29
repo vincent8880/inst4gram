@@ -92,3 +92,19 @@ def like(request,operation,pk):
         image.likes -= 1
         image.save()
     return redirect('home')
+def update_profile(request):
+    user = request.user
+    if request.method == "POST":
+        form = ProfileForm(request.POST,request.FILES)
+        if form.is_valid():
+            new_bio = form.cleaned_data["bio"]
+            new_pic = form.cleaned_data["pic"]
+            profile = Profile.objects.get(user = request.user)
+            profile.bio = new_bio
+            profile.pic = new_pic
+            profile.save()
+            final_url = "/profile/" + str(request.user.id) + "/"
+            return redirect(final_url)
+    else:
+        form = ProfileForm()
+    return render(request, "edit_profile.html", {"form":form})  

@@ -9,7 +9,7 @@ class Profile(models.Model):
     prof_pic = ImageField(blank=True, manual_crop='800x800')
     bio = HTMLField()
     user = models.OneToOneField(User,on_delete=models.CASCADE, primary_key=True)
-
+   
     def save_profile(self):
         self.save()
     

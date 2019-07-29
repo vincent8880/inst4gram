@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^image/(?P<image_id>\d+)', views.single_image, name='single_image'),
     url(r'^search/', views.search, name='search'),
     url(r'^like/(?P<operation>.+)/(?P<pk>\d+)',views.like, name='like'),
+     url(r"^profile/update/$", views.update_profile, name = "update_profile"),
 ]
 
 if settings.DEBUG:
